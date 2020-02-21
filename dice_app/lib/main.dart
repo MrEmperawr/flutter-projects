@@ -9,6 +9,7 @@ void main() {
         appBar: AppBar(
           title: Text('Dice App'),
           backgroundColor: Colors.red,
+          centerTitle: true,
         ),
         body: DicePage(),
       )
@@ -42,7 +43,7 @@ class _DicePageState extends State<DicePage> {
             onPressed: () {
                 changeDiceFace();
             },
-            child: Image.asset('images/$leftDiceNumber.png'),
+            child: Image.asset('images/dice$leftDiceNumber.png'),
           ),
         ),
         Expanded(
@@ -50,7 +51,7 @@ class _DicePageState extends State<DicePage> {
             onPressed: () {
               changeDiceFace();
             },
-            child: Image.asset('images/$rightDiceNumber.png'),
+            child: Image.asset('images/dice$rightDiceNumber.png'),
           ),
         ),
         ],
