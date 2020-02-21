@@ -14,6 +14,7 @@ class IntroApp extends StatelessWidget {
           backgroundColor: Colors.teal,
           body: SafeArea(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 CircleAvatar(
                   radius: 50,
@@ -34,13 +35,23 @@ class IntroApp extends StatelessWidget {
                     fontFamily: 'Source Sans Pro',
                     color: Colors.teal.shade100,
                     letterSpacing: 1.5,
-                    fontWeight: FontWeight.bold
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25,
                   ),
                 ),
-                Container(
+                SizedBox(
+                  height: 20,
+                  width: 300,
+                  child: Divider(
+                    color: Colors.white,
+                    ),
+                ),
+                Card(
                   color: Colors.white,
                   margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                  child: Row(
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Row(
                     children: <Widget>[
                       Icon(
                         Icons.phone,
@@ -57,12 +68,17 @@ class IntroApp extends StatelessWidget {
                           fontSize: 20,
                           ),
                       )
-                  ],)
+                    ],
+                  )
+                  )
+                  
                 ),
-                Container(
+                Card(
                   color: Colors.white,
                   margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                  child: Row(
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Row(
                     children: <Widget>[
                       Icon(
                         Icons.email,
@@ -78,8 +94,10 @@ class IntroApp extends StatelessWidget {
                           fontFamily: 'Source Sans Pro',
                           fontSize: 20,
                           ),
-                      )
-                  ],)
+                        )
+                      ],
+                    )
+                  )
                 )
               ],
 
