@@ -20,6 +20,30 @@ class Quizzler extends StatelessWidget {
 }
 
 class QuizPage extends StatefulWidget {
+
+  List scoreKeeper = [
+    Icon(
+        Icons.check,
+        color: Colors.green,
+    ),
+    Icon(
+        Icons.close,
+        color: Colors.red,
+    ),
+    Icon(
+        Icons.close,
+        color: Colors.red,
+    ),
+    Icon(
+        Icons.close,
+        color: Colors.red,
+    ),
+    Icon(
+        Icons.close,
+        color: Colors.red,
+    ),
+  ];
+
   @override
   _QuizPageState createState() => _QuizPageState();
 }
@@ -84,7 +108,10 @@ class _QuizPageState extends State<QuizPage> {
             ),
           ),
         ),
-        //TODO: Add a Row here as your score keeper
+        Row(
+          children: <Widget> [
+            
+        ])
       ],
     );
   }
